@@ -1,0 +1,55 @@
+.square {
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+}
+.square .walls-top .wall-left {
+  border-radius: 5px 0 0 0;
+}
+.square .walls-top .wall-right {
+  border-radius: 0 5px 0 0;
+}
+.square .walls-bottom .wall-left {
+  border-radius: 0 0 0 5px;
+}
+.square .walls-bottom .wall-right {
+  border-radius: 0 0 5px 0;
+}
+.square div {
+  background-color: red;
+  clear: both;
+}
+.square div div {
+  float: left;
+  clear: none;
+}
+.square .walls-top div,
+.square .walls-bottom div {
+  height: 20px;
+}
+.square .walls-middle div {
+  height: 60px;
+}
+.square .wall-left,
+.square .wall-right {
+  width: 20px;
+}
+.square .wall-centre {
+  width: 60px;
+}
+.square .walls-middle .wall-centre {
+  background-color: green;
+}
+.square.top .walls-top .wall-centre {
+  background-color: green;
+}
+.square.bottom .walls-bottom .wall-centre {
+  background-color: green;
+}
+.square.left .walls-middle .wall-left {
+  background-color: green;
+}
+.square.right .walls-middle .wall-right {
+  background-color: green;
+}
