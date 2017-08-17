@@ -1,9 +1,8 @@
 import { combineReducers } from 'redux';
-import * as data from '../api/data';
 
 
-const board = (state, filter) => {
-	return data.board;
+const board = (state = [], filter) => {
+	return state;
 }
 
 const game = combineReducers({
