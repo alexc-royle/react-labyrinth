@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
-import BoardSquareList from '../containers/BoardSquareList';
-//import './Column.css';
+import SquareListContainer from '../containers/SquareListContainer';
+import '../css/Row.css';
 
-const Column = ({
-	id
+const Row = ({
+	rowId
 }) => (
-	<BoardSquareList columnId={id}/>
+	<div className="row">
+		<SquareListContainer rowId={rowId}/>
+		<div className="clearBoth"/>
+	</div>
 )
 
-export default Column;
+export default Row;

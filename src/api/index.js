@@ -41,16 +41,26 @@ const createSquares = (row) => {
 		return createSquare(square.type, square.orientation);
 	});
 }
+
+const createSingleSquare = (squareData) => createSquare(squareData.type, squareData.orientation)
+
 const createRow = (row) => ({ id: v4(), squares: createSquares(row)});
 
-const createRows = (baseboard) => baseBoard.map((row, number) => createRow(row));
+const createRows = (baseBoard) => baseBoard.map((row, number) => createRow(row));
 
-const createBoard = () => ({id: v4(), rows: createRows(base.board)})
+const createBoard = () => ({
+	id: v4(), 
+	rows: createRows(base.board), 
+	spare: createSingleSquare(squareData.pop())
+});
 
-const boards = []
-}];
+let boards = {};
 
 
 export const fetchNewBoard = () => new Promise(
-	resolve => resolve(createBoard())
+	resolve => {
+		var newBoard = createBoard();
+		boards = {...boards, [newBoard.id]: newBoard};
+		resolve(newBoard)
+	}
 );

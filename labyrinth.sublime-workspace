@@ -1,0 +1,923 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"square",
+				"squareBefore"
+			],
+			[
+				"norma",
+				"normalized"
+			],
+			[
+				"To",
+				"TodoList"
+			],
+			[
+				"C",
+				"Component"
+			],
+			[
+				"on",
+				"onAddClick"
+			],
+			[
+				"vis",
+				"visibilityFilter"
+			],
+			[
+				"player",
+				"playerOneIsNext"
+			],
+			[
+				"si",
+				"slice"
+			],
+			[
+				"cal",
+				"calculateWinner"
+			],
+			[
+				"ca",
+				"calculateWinner"
+			],
+			[
+				"st",
+				"state"
+			],
+			[
+				"cons",
+				"constructor"
+			],
+			[
+				"url",
+				"urlId"
+			],
+			[
+				"languag",
+				"languageId"
+			],
+			[
+				"lang",
+				"LanguageController"
+			],
+			[
+				"la",
+				"LanguageController"
+			],
+			[
+				"co",
+				"console"
+			],
+			[
+				"table",
+				"table-cell"
+			],
+			[
+				"ta",
+				"table-row"
+			],
+			[
+				"li",
+				"link\tTag"
+			],
+			[
+				"key",
+				"keywordNum"
+			],
+			[
+				"sentance",
+				"sentanceNum"
+			],
+			[
+				"input",
+				"inputColumn"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"cur",
+				"cursor"
+			],
+			[
+				"max",
+				"max-height"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"margi",
+				"margin-bottom"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"su",
+				"superSecret"
+			],
+			[
+				"api",
+				"apiRoutes"
+			],
+			[
+				"password",
+				"passwordHash"
+			],
+			[
+				"new",
+				"newPersonAuth"
+			],
+			[
+				"pag",
+				"page_views"
+			],
+			[
+				"request",
+				"request_time_logger"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/components/Square.js",
+			"settings":
+			{
+				"buffer_size": 831,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/containers/BoardRowist.js",
+			"settings":
+			{
+				"buffer_size": 335,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/reducers/index.js",
+			"settings":
+			{
+				"buffer_size": 243,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/actions/index.js",
+			"settings":
+			{
+				"buffer_size": 168,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "import { schema } from 'normalizr';\n\nexport const square = new schema.Entity('squares');\nexport const arrayOfSquares= new schema.Array(square);\n\nexport const row = new schema.Entity('rows');\nexport const arrayOfRows = schema.Array(row);\n\nexport const row = new schema.Entity('rows');\nexport const arrayOfRows = schema.Array(row);",
+			"file": "src/actions/schema.js",
+			"file_size": 0,
+			"file_write_time": 131471294845505720,
+			"settings":
+			{
+				"buffer_size": 329,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": ".gitignore",
+			"settings":
+			{
+				"buffer_size": 303,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/alexr/.profile",
+			"settings":
+			{
+				"buffer_size": 500,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/App.js",
+			"settings":
+			{
+				"buffer_size": 313,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/components/Row.js",
+			"settings":
+			{
+				"buffer_size": 218,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/RowList.js",
+			"settings":
+			{
+				"buffer_size": 195,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/api/data.js",
+			"settings":
+			{
+				"buffer_size": 3009,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 219.0,
+		"last_filter": "babel",
+		"selected_items":
+		[
+			[
+				"babel",
+				"Preferences: Babel – Default"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/F/development/labyrinth",
+		"/F/development/labyrinth/src/actions",
+		"/F/development/labyrinth/src/api",
+		"/F/development/labyrinth/src/components",
+		"/F/development/labyrinth/src/constants",
+		"/F/development/labyrinth/src/containers",
+		"/F/development/labyrinth/src/reducers"
+	],
+	"file_history":
+	[
+		"/F/development/tutorials/react/redux-todo-tutorial/src/index_lesson2.js",
+		"/F/development/labyrinth/src/components/ColumnList.js",
+		"/F/development/labyrinth/src/reducers/index.test.js",
+		"/F/development/labyrinth/src/data.js",
+		"/F/development/tutorials/react/react-tictactoe/src/index.js",
+		"/F/development/labyrinth/src/index.js",
+		"/F/development/labyrinth/src/components/Root.js",
+		"/F/development/labyrinth/src/containers/SquareList.js",
+		"/F/development/labyrinth/src/components/SquareList.js",
+		"/F/development/labyrinth/src/components/Column.js",
+		"/F/development/labyrinth/src/api/data.js",
+		"/F/development/labyrinth/src/constants/configureStore.js",
+		"/F/development/labyrinth/src/components/Square.less",
+		"/F/development/labyrinth/src/reducers/index.js",
+		"/F/development/labyrinth/src/components/App.js",
+		"/F/development/tutorials/react/react-redux-tutorial/src/todo.test.js",
+		"/F/development/labyrinth/src/containers/configureStore.js",
+		"/F/development/labyrinth/package.json",
+		"/F/development/labyrinth/src/Square.js",
+		"/F/development/labyrinth/src/Square.less",
+		"/F/development/labyrinth/src/App.js",
+		"/F/development/tutorials/react/react-redux-tutorial/src/multiple-counter.test.js",
+		"/F/development/tutorials/react/redux-todo-tutorial/src/api/index.js",
+		"/F/development/tutorials/react/redux-todo-tutorial/src/reducers/createList.js",
+		"/F/development/tutorials/react/redux-todo-tutorial/src/reducers/byId.js",
+		"/F/development/tutorials/react/redux-todo-tutorial/src/reducers/index.js",
+		"/F/development/tutorials/react/redux-todo-tutorial/src/containers/VisibleTodoList.js",
+		"/F/development/tutorials/react/redux-todo-tutorial/src/components/FetchError.js",
+		"/F/development/tutorials/react/redux-todo-tutorial/src/actions/schema.js",
+		"/F/development/tutorials/react/redux-todo-tutorial/src/actions/index.js",
+		"/F/development/tutorials/react/redux-todo-tutorial/src/constants/configureStore.js",
+		"/F/development/tutorials/react/redux-todo-tutorial/src/index.js",
+		"/F/development/tutorials/react/redux-todo-tutorial/src/constants/configureStore.localState.js",
+		"/F/development/tutorials/react/redux-todo-tutorial/src/reducers/todos.js",
+		"/F/development/tutorials/react/redux-todo-tutorial/src/containers/FilterLink.js",
+		"/F/development/tutorials/react/redux-todo-tutorial/src/components/App.js",
+		"/F/development/tutorials/react/redux-todo-tutorial/src/constants/index.js",
+		"/F/development/tutorials/react/redux-todo-tutorial/src/components/Root.js",
+		"/F/development/tutorials/react/redux-todo-tutorial/src/components/Footer.js",
+		"/F/development/tutorials/react/redux-todo-tutorial/src/containers/FilterLink.old.js",
+		"/F/development/tutorials/react/redux-todo-tutorial/src/constants/localStorage.js",
+		"/F/development/tutorials/react/redux-todo-tutorial/src/localStorage.js",
+		"/F/development/tutorials/react/redux-todo-tutorial/src/containers/AddTodo.js",
+		"/F/development/tutorials/react/redux-todo-tutorial/src/components/TodoApp.js",
+		"/F/development/tutorials/react/redux-todo-tutorial/src/components/TodoList.js",
+		"/F/development/tutorials/react/redux-todo-tutorial/src/components/Link.js",
+		"/F/development/tutorials/react/redux-todo-tutorial/src/components/Todo.js",
+		"/F/development/tutorials/react/redux-todo-tutorial/src/reducers/todo.js",
+		"/F/development/tutorials/react/redux-todo-tutorial/src/reducers/visibilityFilter.js",
+		"/F/development/tutorials/react/redux-todo-tutorial/src/containers/TodoApp.js",
+		"/F/development/tutorials/react/react-redux-tutorial/src/multiple-counter.js",
+		"/F/development/tutorials/react/react-redux-tutorial/package.json",
+		"/F/development/tutorials/react/react-redux-tutorial/src/index.js",
+		"/F/development/tutorials/react/react-connectfour/src/Game.js",
+		"/F/development/tutorials/react/react-connectfour/src/Board.js",
+		"/F/development/tutorials/react/react-redux-tutorial/src/todo.js",
+		"/F/development/tutorials/react/react-redux-tutorial/src/counter.test.js",
+		"/F/development/tutorials/react/react-redux-tutorial/src/react-simple-counter.js",
+		"/F/development/tutorials/react/react-redux-tutorial/src/simple-counter.js",
+		"/F/development/tutorials/react/react-redux-todo/src/index.js",
+		"/F/development/tutorials/react/react-redux-todo/package.json",
+		"/F/development/tutorials/react/react-redux-counter/src/index.js",
+		"/F/development/tutorials/react/react-redux-counter/package.json",
+		"/F/development/tutorials/react/react-connectfour/src/withinBounds.test.js",
+		"/F/development/tutorials/react/react-connectfour/src/withinBounds.js",
+		"/F/development/tutorials/react/react-connectfour/src/index.js",
+		"/F/development/tutorials/react/react-connectfour/src/Column.js",
+		"/F/development/tutorials/react/react-connectfour/src/Square.js",
+		"/F/development/tutorials/react/react-connectfour/src/getMatchingItemsInDir.js",
+		"/F/development/tutorials/react/react-connectfour/src/index.css",
+		"/F/development/tutorials/react/react-connectfour/src/isThereAWinner.js",
+		"/F/development/tutorials/react/react-connectfour/src/getNewX.js",
+		"/F/development/tutorials/react/react-connectfour/src/getNewY.js",
+		"/F/development/tutorials/react/react-connectfour/src/index.test.js",
+		"/F/development/tutorials/react/react-connectfour/src/App.test.js",
+		"/F/development/tutorials/react/react-connectfour/src/App.js",
+		"/C/Users/alexr/AppData/Roaming/Sublime Text 3/Packages/Babel/Babel.sublime-settings",
+		"/F/development/tutorials/react/react-tictactoe/src/index.css",
+		"/F/development/tutorials/react/react-tictactoe/package.json",
+		"/F/development/tutorials/angular/angular-quickstart/src/app/hero.ts",
+		"/F/development/language-mean-app/src/app/course.ts",
+		"/F/development/language-mean-app/server/model/word.js",
+		"/F/development/language-mean-app/server/controller/course.js",
+		"/F/development/language-mean-app/server/controller/word.js",
+		"/F/development/language-mean-app/server/controller/keyword.js",
+		"/F/development/tutorials/angular/angular-quickstart/src/app/hero.service.ts",
+		"/F/development/language-mean-app/server/route/keyword.js",
+		"/F/development/language-mean-app/server/model/keyword.js",
+		"/F/development/language-mean-app/server/route/word.js",
+		"/F/development/tutorials/angular/angular-quickstart/src/app/hero.js",
+		"/F/development/tutorials/angular/angular-quickstart/src/app/hero.service.js",
+		"/F/hungarian/ablative-case-2.txt",
+		"/F/development/language-mean-app/server/model/course.js",
+		"/F/development/language-mean-app/server/model/language.js",
+		"/F/development/language-mean-app/server/model/user.js",
+		"/F/development/language-mean-app/server/routes.js",
+		"/F/development/language-mean-app/server/controller/language.js",
+		"/F/development/language-mean-app/server/route/language.js",
+		"/F/development/language-mean-app/server/route/course.js",
+		"/F/development/language-mean-app/server.js",
+		"/F/development/tutorials/express/express-auth-token-jwt/server.js",
+		"/F/development/tutorials/express/express-auth-token-jwt/app/models/user.js",
+		"/F/development/tutorials/express/express-restful-api/app/routes/film.js",
+		"/F/development/language-app-v2/index.js",
+		"/F/development/language-app/routes/keyword.js",
+		"/F/development/tutorials/express/expressjs-tutorial-point/routes/person.js",
+		"/F/development/language-mean-app/server/route/user.js",
+		"/F/development/tutorials/express/expressjs-tutorial-point/index_auth.js",
+		"/F/development/tutorials/express/expressjs-tutorial-point/package.json",
+		"/F/development/language-mean-app/package.json",
+		"/F/development/language-mean-app/server/route/test.js",
+		"/F/development/tutorials/express/expressjs-tutorial-point/routes/session.js",
+		"/F/development/tutorials/express/express-hello-world-v2/routes/person.js",
+		"/F/development/tutorials/express/express-hello-world-v2/routes/dynamic.js",
+		"/F/development/tutorials/express/expressjs-tutorial-point/index.js",
+		"/F/development/tutorials/express/expressjs-tutorial-point/routes/cookies.js",
+		"/F/development/language-mean-app/server/route/base.js",
+		"/F/development/language-mean-app/server/scripts/languages.js",
+		"/F/development/language-mean-app/src/app/lma-keyword.ts",
+		"/F/development/language-app-v2/package.json",
+		"/F/development/tutorials/express/express-hello-world-v2/package.json",
+		"/F/development/language-app-v2/public/js/main.js",
+		"/F/development/language-app-v2/public/css/main.css",
+		"/F/development/language-app-v2/public/index.html",
+		"/F/development/language-app-v2/.bowerrc",
+		"/F/development/language-app/app.js",
+		"/F/development/language-app/package.json",
+		"/F/development/language-app/models/word.js"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"Square",
+			"{type: 'any', orientation: 'any'}",
+			"number:",
+			"TodoList",
+			"TOGGLE_TODO",
+			"onTodoClick",
+			"nextTodoId",
+			"Running Tests",
+			"#running-tests",
+			"test",
+			"Language",
+			"Languages",
+			"languageId",
+			"LanguageController",
+			"bcrypt",
+			"Keyword",
+			"Sentance",
+			"sentance",
+			"Sentance",
+			"sentance",
+			"Keyword",
+			"keyword",
+			"Person",
+			"AppComponent",
+			"selectedHero",
+			"sche"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Column",
+			"null",
+			"orientation:",
+			"Course",
+			"Courses",
+			"courseId",
+			"CourseController",
+			"Sentance",
+			"Keyword",
+			"wordSentance",
+			"Word",
+			"word",
+			"Sentance",
+			"sentance",
+			"Keyword",
+			"HeroesComponent",
+			"hero"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 6,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/components/Square.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 831,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								116,
+								116
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/containers/BoardRowist.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 335,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								335,
+								335
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/reducers/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 243,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								205,
+								205
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/actions/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 168,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								168,
+								168
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/actions/schema.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 329,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								329,
+								329
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": ".gitignore",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 303,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								303,
+								303
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/C/Users/alexr/.profile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 500,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								500,
+								500
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/components/App.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 313,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								166,
+								166
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/components/Row.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 218,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								158,
+								158
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "src/components/RowList.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 195,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								85,
+								85
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "src/api/data.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3009,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2980,
+								2993
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1304.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "labyrinth.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 265.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

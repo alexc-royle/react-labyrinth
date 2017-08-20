@@ -1,19 +1,13 @@
 import React, { Component } from 'react';
-import './Square.css';
+import '../css/Square.css';
 
 const Square = ({
 	id,
 	type,
-	orientation
+	orientation,
+	orientationClasses
 }) => (
-		<div className={
-			'square ' +
-			(orientation.top ? 'top ' : '') +
-			(orientation.right ? 'right ' : '') +
-			(orientation.bottom ? 'bottom ' : '') +
-			(orientation.left ? 'left' : '')
-			}
-		>
+		<div className={'square ' + orientationClasses}>
 			<div className="walls-top">
 				<div className="wall-left"></div>
 				<div className="wall-centre"></div>

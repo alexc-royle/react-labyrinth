@@ -1,14 +1,14 @@
 import React from 'react';
-import Square from './Square';
+import SquareContainer from '../containers/SquareContainer';
 
 const SquareList = ({
 	squares
 }) => (
-	<div>
+	<div className="squares">
 		{squares.map(square =>
-			<Square
+			<SquareContainer
 				key={square.id}
-				{...square}
+				squareId={square.id}
 			/>
 		)}
 	</div>

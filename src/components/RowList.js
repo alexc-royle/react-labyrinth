@@ -4,11 +4,11 @@ import Row from './Row';
 const RowList = ({
 	rows
 }) => (
-	<div>
+	<div className="rows">
 		{rows.map(row =>
 			<Row
 				key={row.id}
-				{...row}
+				rowId={row.id}
 			/>
 		)}
 	</div>
