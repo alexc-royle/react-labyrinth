@@ -14,7 +14,6 @@ class SquareContainer extends React.Component {
 
 	render() {
 		const orientation = this.props.square.orientation
-		console.log(this.props.square);
 		return (
 			<Square
 				orientationClasses={
@@ -32,7 +31,7 @@ class SquareContainer extends React.Component {
 
 const mapStateToProps = (state, props) => {
 	return {
-		square: getSquare(state.squares, props.squareId),
+		square: getSquare(state.squaresById, props.squareId),
 	}
 };
 

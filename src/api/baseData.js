@@ -58,4 +58,10 @@ export const board = [
 		null,
 		{type: 'bend', orientation: 2}
 	]
-]
+];
+
+export const squareData = [
+	...Array(16).fill({type: 'bend', orientation: 'any'}),
+	...Array(6).fill({'type': 'tjunction', orientation: 'any'}),
+	...Array(12).fill({'type': 'straight', orientation: 'any'})
+];

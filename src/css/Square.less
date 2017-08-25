@@ -1,5 +1,6 @@
-.square {
+@import "variables.less";
 
+.square {
 	background-color: blue;
 	width: 50px;
 	height:50px;
@@ -23,7 +24,7 @@
 		}
 	}
 	div {
-		background-color: red;
+		background-color: @wall-colour;
 		clear: both;
 		div {
 			float: left;
@@ -48,34 +49,34 @@
 	}
 	.walls-middle {
 		.wall-centre {
-			background-color: green;
+			background-color: @floor-colour;
 		}
 	}
 	&.up {
 		.walls-top {
 			.wall-centre {
-				background-color: green;
+				background-color: @floor-colour;
 			}
 		}
 	}
 	&.down {
 		.walls-bottom {
 			.wall-centre {
-				background-color: green;
+				background-color: @floor-colour;
 			}
 		}
 	}
 	&.left {
 		.walls-middle {
 			.wall-left {
-				background-color: green;
+				background-color: @floor-colour;
 			}
 		}
 	}
 	&.right {
 		.walls-middle {
 			.wall-right {
-				background-color: green;
+				background-color: @floor-colour;
 			}
 		}
 	}

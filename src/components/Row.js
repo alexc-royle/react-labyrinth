@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import SquareListContainer from '../containers/SquareListContainer';
 import '../css/Row.css';
 

@@ -18,7 +18,6 @@ class BoardContainer extends React.Component {
 	}
 
 	render() {
-		console.log('props', this.props)
 		if(this.props.board) {
 			return (
 				<Board id={this.props.board.id}/>

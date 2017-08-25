@@ -1,66 +1,78 @@
-import { v4 } from 'node-uuid';
-import * as base from './baseData';
-
-
-
-const shuffleArray = (array) => [...array].sort(() => (Math.random() - 0.5))
-const getRandomArrayElement = (array) => {
-	const length = array.length;
-	if(length === 0) return false;
-	if(length === 1) return array[0];
-	return array[Math.ceil(Math.random() * length ) - 1];
-}
-
-export const squareData = shuffleArray([
-	...Array(16).fill({type: 'bend', orientation: 'any'}),
-	...Array(6).fill({'type': 'tjunction', orientation: 'any'}),
-	...Array(12).fill({'type': 'straight', orientation: 'any'})
-]);
-
-const getType = (type) => {
-	if(type !== 'any') return type;
-	return getRandomArrayElement(base.shapes);
-}
-
-const getOrientation = (type, orientation) => {
-	if(orientation !== 'any') return base.orientations[type][orientation];
-	return getRandomArrayElement(base.orientations[type]);
-}
-
-
-const createSquare = (type, orientation) => {
-	const squareType = getType(type);
-	const squareOrientation = getOrientation(squareType, orientation);
-	return {id: v4(), type: squareType, orientation: squareOrientation}
-}
-const createSquares = (row) => {
-	return row.map((square, squareNumber) => {
-		if(!square) {
-			square = squareData.pop();
-		}
-		return createSquare(square.type, square.orientation);
-	});
-}
-
-const createSingleSquare = (squareData) => createSquare(squareData.type, squareData.orientation)
-
-const createRow = (row) => ({ id: v4(), squares: createSquares(row)});
-
-const createRows = (baseBoard) => baseBoard.map((row, number) => createRow(row));
-
-const createBoard = () => ({
-	id: v4(), 
-	rows: createRows(base.board), 
-	spare: createSingleSquare(squareData.pop())
-});
+import { squareData } from './baseData';
+import createBoard from './createBoard';
+import shuffle from '../constants/shuffleArray';
 
 let boards = {};
 
+const getBoard = boardId => boards[boardId];
 
 export const fetchNewBoard = () => new Promise(
 	resolve => {
-		var newBoard = createBoard();
+		const squareList = shuffle(squareData);
+		const newBoard = createBoard(squareList);
 		boards = {...boards, [newBoard.id]: newBoard};
 		resolve(newBoard)
 	}
+);
+const insertSpareSquareIntoRow = (board, orientation, itemNumber) => {
+	let squares = [...board.rows[itemNumber].squares];
+	let currentSpareSquare = board.spare;
+	let newSpareSquare;
+	switch(orientation) {
+		case "left":
+			newSpareSquare = squares.shift();
+			squares.push(currentSpareSquare);
+			break;
+		case "right":
+			newSpareSquare = squares.pop();
+			squares.unshift(currentSpareSquare);
+			break;
+		default:
+			break;
+	}
+	board.rows[itemNumber].squares = squares;
+	board.spare = newSpareSquare;
+	return board;
+}
+const insertSpareSquareIntoColumn = (board, orientation, itemNumber) => {
+	let squares = board.rows.map(row => row.squares[itemNumber]);
+	let currentSpareSquare = board.spare;
+	let newSpareSquare;
+	switch(orientation) {
+		case "up":
+			newSpareSquare = squares.shift();
+			squares.push(currentSpareSquare);
+			break;
+		case "down":
+			newSpareSquare = squares.pop();
+			squares.unshift(currentSpareSquare);
+			break;
+		default:
+			break;
+	}
+	let rowNum = 0;
+	for(let square of squares) {
+		board.rows[rowNum].squares.splice(itemNumber, 1, square);
+		rowNum++;
+	}
+	board.spare = newSpareSquare;
+	return board;
+}
+export const insertSpareSquare = (boardId, orientation, itemType, itemNumber) => new Promise(
+	resolve => {
+		let board = getBoard(boardId);
+		switch(itemType) {
+			case "row":
+				board = insertSpareSquareIntoRow(board, orientation, itemNumber)
+				break;
+			case "column":
+				board = insertSpareSquareIntoColumn(board, orientation, itemNumber);
+				break;
+			default:
+				break;	
+		}
+		boards = {...boards, [board.id]: board};
+		resolve(board);
+	}
+	
 );
