@@ -1,7 +1,7 @@
 import { normalize } from 'normalizr';
 import * as api from '../api';
 import * as schema from './schema';
-import {getCurrentBoard} from '../reducers';
+import {getCurrentBoard, getSpareSquare} from '../reducers';
 
 export const fetchNewBoard = () => (dispatch, getState) => {
 	dispatch({
@@ -34,4 +34,20 @@ export const insertSpareSquare = (orientation, itemType, itemNumber) => (dispatc
 			response: normalize(response, schema.boardSchema)
 		})
 	})
+}
+
+export const rotateSpareSquare = () => (dispatch, getState) => {
+	const currentState = getState();
+	const square = getSpareSquare(currentState);
+	dispatch({
+		type: 'ROTATE_SPARE_SQUARE_REQUEST'
+	});
+	
+	return api.rotateSquare(square).then(response => {
+		dispatch({
+			type: 'ROTATE_SPARE_SQUARE_REQUEST_SUCCESS',
+			response: normalize(response, schema.squareSchema)
+		})
+	});
+	
 }

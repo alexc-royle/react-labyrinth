@@ -76,3 +76,16 @@ export const insertSpareSquare = (boardId, orientation, itemType, itemNumber) =>
 	}
 	
 );
+
+export const rotateSquare = (square) => new Promise(
+	resolve => {
+		var orientation = square.orientation;
+		var newOrientation = Object.assign({}, orientation, {
+			up: orientation.left,
+			right: orientation.up,
+			down: orientation.right,
+			left: orientation.down
+		});
+		resolve({...square, orientation: newOrientation})
+	}
+)

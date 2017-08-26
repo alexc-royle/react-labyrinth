@@ -15,7 +15,7 @@ const BoardButtonList = ({
 				key={orientation + itemId}
 				show={ itemId%2 !== 0} 
 				orientation={orientation}
-				onClick={() => onButtonClick(orientation, type, itemId)}
+				onButtonClick={() => onButtonClick(orientation, type, itemId)}
 			/>
 		)
 	}

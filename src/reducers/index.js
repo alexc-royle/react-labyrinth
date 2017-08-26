@@ -28,6 +28,7 @@ const rowsById = (state = {}, action) => {
 const squaresById = (state = {}, action) => {
 	switch(action.type) {
 		case "FETCH_NEW_BOARD_REQUEST_SUCCESS":
+		case "ROTATE_SPARE_SQUARE_REQUEST_SUCCESS":
 			return {
 				...state,
 				...action.response.entities.squares
@@ -134,10 +135,10 @@ export const getSquaresForRow = (state, rowId) => {
 	)
 }
 
-export const getSquare = (state, id) => state[id];
+export const getSquare = (state=[], id) => state[id];
 
 export const getNumberOfRows = (state) => state.currentBoard.numberOfRows;
 
 export const getNumberOfColumns = (state) => state.currentBoard.numberOfColumns;
 
-export const getSpareSquare = (state) => getSquare(state.squares, state.spareSquare);
+export const getSpareSquare = (state) => getSquare(state.squaresById, state.spareSquare);

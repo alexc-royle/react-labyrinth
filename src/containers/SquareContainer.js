@@ -13,15 +13,8 @@ class SquareContainer extends React.Component {
 	componentDidUpdate(prevProps) {}
 
 	render() {
-		const orientation = this.props.square.orientation
 		return (
 			<Square
-				orientationClasses={
-					(orientation.up ? 'up ' : '') +
-					(orientation.right ? 'right ' : '') +
-					(orientation.down ? 'down ' : '') +
-					(orientation.left ? 'left' : '')
-				}
 				{...this.props.square}
 			/>
 		);
