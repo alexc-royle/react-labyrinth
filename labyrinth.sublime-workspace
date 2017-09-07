@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"cons",
+				"console"
+			],
+			[
+				"squ",
+				"squareSchema"
+			],
+			[
+				"boa",
+				"boardSchema"
+			],
+			[
 				"square",
 				"squareBefore"
 			],
@@ -46,10 +58,6 @@
 			[
 				"st",
 				"state"
-			],
-			[
-				"cons",
-				"constructor"
 			],
 			[
 				"url",
@@ -160,28 +168,19 @@
 	"buffers":
 	[
 		{
-			"file": "src/components/Square.js",
+			"file": "src/containers/SpareSquareContainer.js",
 			"settings":
 			{
-				"buffer_size": 831,
+				"buffer_size": 731,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/containers/BoardRowist.js",
+			"file": "src/components/Button.js",
 			"settings":
 			{
-				"buffer_size": 335,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/reducers/index.js",
-			"settings":
-			{
-				"buffer_size": 243,
+				"buffer_size": 200,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -190,72 +189,79 @@
 			"file": "src/actions/index.js",
 			"settings":
 			{
-				"buffer_size": 168,
+				"buffer_size": 1307,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "import { schema } from 'normalizr';\n\nexport const square = new schema.Entity('squares');\nexport const arrayOfSquares= new schema.Array(square);\n\nexport const row = new schema.Entity('rows');\nexport const arrayOfRows = schema.Array(row);\n\nexport const row = new schema.Entity('rows');\nexport const arrayOfRows = schema.Array(row);",
-			"file": "src/actions/schema.js",
-			"file_size": 0,
-			"file_write_time": 131471294845505720,
+			"file": "src/api/index.js",
 			"settings":
 			{
-				"buffer_size": 329,
+				"buffer_size": 2338,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": ".gitignore",
+			"file": "src/reducers/index.js",
 			"settings":
 			{
-				"buffer_size": 303,
+				"buffer_size": 3088,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 880,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/C/Users/alexr/.profile",
+			"file": "README.md",
 			"settings":
 			{
-				"buffer_size": 500,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/App.js",
-			"settings":
-			{
-				"buffer_size": 313,
+				"buffer_size": 103850,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/components/Row.js",
+			"file": "src/components/BoardButton.js",
 			"settings":
 			{
-				"buffer_size": 218,
+				"buffer_size": 402,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/components/RowList.js",
+			"file": "src/components/RotateSpareSquareButton.js",
 			"settings":
 			{
-				"buffer_size": 195,
+				"buffer_size": 343,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/api/data.js",
+			"file": "src/components/BoardButtonList.js",
 			"settings":
 			{
-				"buffer_size": 3009,
+				"buffer_size": 587,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/SpareSquare.js",
+			"settings":
+			{
+				"buffer_size": 389,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -309,28 +315,63 @@
 		"/F/development/labyrinth",
 		"/F/development/labyrinth/src/actions",
 		"/F/development/labyrinth/src/api",
-		"/F/development/labyrinth/src/components",
 		"/F/development/labyrinth/src/constants",
 		"/F/development/labyrinth/src/containers",
 		"/F/development/labyrinth/src/reducers"
 	],
 	"file_history":
 	[
+		"/F/development/labyrinth/src/actions/index.js",
+		"/F/development/labyrinth/src/components/SpareSquare.js",
+		"/F/development/labyrinth/src/components/RotateSpareSquareButton.js",
+		"/F/development/labyrinth/src/components/Button.js",
+		"/F/development/labyrinth/src/components/BoardButton.js",
+		"/F/development/labyrinth/src/components/BoardButtonList.js",
+		"/F/development/labyrinth/src/containers/BoardContainer.js",
+		"/F/development/labyrinth/src/reducers/index.js",
+		"/F/development/labyrinth/src/containers/SquareContainer.js",
+		"/F/development/labyrinth/src/components/Square.js",
+		"/F/development/labyrinth/src/api/index.js",
+		"/F/development/labyrinth/src/api/createBoard.js",
+		"/F/development/labyrinth/src/api/createRows.js",
+		"/F/development/labyrinth/src/api/createRow.js",
+		"/F/development/labyrinth/src/api/createSquares.js",
+		"/F/development/labyrinth/src/api/createSquare.js",
+		"/F/development/labyrinth/src/constants/getRandomArrayItem.js",
+		"/F/development/labyrinth/src/constants/shuffleArray.js",
+		"/F/development/labyrinth/src/index.js",
+		"/F/development/labyrinth/src/components/App.js",
+		"/F/development/labyrinth/src/api/baseData.js",
+		"/F/development/labyrinth/src/containers/BoardButtonListContainer.js",
+		"/F/development/labyrinth/src/components/Board.js",
+		"/F/development/labyrinth/src/components/Row.js",
+		"/F/development/labyrinth/src/css/Board.less",
+		"/F/development/labyrinth/src/css/BoardButton.less",
+		"/F/development/labyrinth/src/css/BoardButton.css",
+		"/F/development/labyrinth/src/components/RowList.js",
+		"/F/development/labyrinth/src/containers/RowListContainer.js",
+		"/F/development/labyrinth/src/css/Row.css.map",
+		"/F/development/labyrinth/src/containers/SquareListContainer.js",
+		"/F/development/labyrinth/src/components/SquareList.js",
+		"/F/development/labyrinth/src/css/Square.less",
+		"/F/development/labyrinth/src/css/variables.less",
+		"/F/development/labyrinth/src/css/Row.less",
+		"/F/development/labyrinth/.gitignore",
+		"/F/development/labyrinth/src/actions/schema.js",
+		"/F/development/labyrinth/src/components/Square.less",
+		"/F/development/labyrinth/src/containers/SquareListComtainer.js",
+		"/F/development/labyrinth/src/containers/BoardRowist.js",
+		"/F/development/labyrinth/src/api/data.js",
+		"/C/Users/alexr/.profile",
 		"/F/development/tutorials/react/redux-todo-tutorial/src/index_lesson2.js",
 		"/F/development/labyrinth/src/components/ColumnList.js",
 		"/F/development/labyrinth/src/reducers/index.test.js",
 		"/F/development/labyrinth/src/data.js",
 		"/F/development/tutorials/react/react-tictactoe/src/index.js",
-		"/F/development/labyrinth/src/index.js",
 		"/F/development/labyrinth/src/components/Root.js",
 		"/F/development/labyrinth/src/containers/SquareList.js",
-		"/F/development/labyrinth/src/components/SquareList.js",
 		"/F/development/labyrinth/src/components/Column.js",
-		"/F/development/labyrinth/src/api/data.js",
 		"/F/development/labyrinth/src/constants/configureStore.js",
-		"/F/development/labyrinth/src/components/Square.less",
-		"/F/development/labyrinth/src/reducers/index.js",
-		"/F/development/labyrinth/src/components/App.js",
 		"/F/development/tutorials/react/react-redux-tutorial/src/todo.test.js",
 		"/F/development/labyrinth/src/containers/configureStore.js",
 		"/F/development/labyrinth/package.json",
@@ -407,47 +448,11 @@
 		"/F/development/language-mean-app/server/route/word.js",
 		"/F/development/tutorials/angular/angular-quickstart/src/app/hero.js",
 		"/F/development/tutorials/angular/angular-quickstart/src/app/hero.service.js",
-		"/F/hungarian/ablative-case-2.txt",
-		"/F/development/language-mean-app/server/model/course.js",
-		"/F/development/language-mean-app/server/model/language.js",
-		"/F/development/language-mean-app/server/model/user.js",
-		"/F/development/language-mean-app/server/routes.js",
-		"/F/development/language-mean-app/server/controller/language.js",
-		"/F/development/language-mean-app/server/route/language.js",
-		"/F/development/language-mean-app/server/route/course.js",
-		"/F/development/language-mean-app/server.js",
-		"/F/development/tutorials/express/express-auth-token-jwt/server.js",
-		"/F/development/tutorials/express/express-auth-token-jwt/app/models/user.js",
-		"/F/development/tutorials/express/express-restful-api/app/routes/film.js",
-		"/F/development/language-app-v2/index.js",
-		"/F/development/language-app/routes/keyword.js",
-		"/F/development/tutorials/express/expressjs-tutorial-point/routes/person.js",
-		"/F/development/language-mean-app/server/route/user.js",
-		"/F/development/tutorials/express/expressjs-tutorial-point/index_auth.js",
-		"/F/development/tutorials/express/expressjs-tutorial-point/package.json",
-		"/F/development/language-mean-app/package.json",
-		"/F/development/language-mean-app/server/route/test.js",
-		"/F/development/tutorials/express/expressjs-tutorial-point/routes/session.js",
-		"/F/development/tutorials/express/express-hello-world-v2/routes/person.js",
-		"/F/development/tutorials/express/express-hello-world-v2/routes/dynamic.js",
-		"/F/development/tutorials/express/expressjs-tutorial-point/index.js",
-		"/F/development/tutorials/express/expressjs-tutorial-point/routes/cookies.js",
-		"/F/development/language-mean-app/server/route/base.js",
-		"/F/development/language-mean-app/server/scripts/languages.js",
-		"/F/development/language-mean-app/src/app/lma-keyword.ts",
-		"/F/development/language-app-v2/package.json",
-		"/F/development/tutorials/express/express-hello-world-v2/package.json",
-		"/F/development/language-app-v2/public/js/main.js",
-		"/F/development/language-app-v2/public/css/main.css",
-		"/F/development/language-app-v2/public/index.html",
-		"/F/development/language-app-v2/.bowerrc",
-		"/F/development/language-app/app.js",
-		"/F/development/language-app/package.json",
-		"/F/development/language-app/models/word.js"
+		"/F/hungarian/ablative-case-2.txt"
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -461,6 +466,13 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"GitHub Pages",
+			"github pages",
+			"github-pages",
+			"console",
+			"state.currentBoard",
+			"console.log",
+			"currentSpareSquare",
 			"Square",
 			"{type: 'any', orientation: 'any'}",
 			"number:",
@@ -521,249 +533,24 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/components/Square.js",
+					"file": "src/containers/SpareSquareContainer.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 831,
+						"buffer_size": 731,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								116,
-								116
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/containers/BoardRowist.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 335,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								335,
-								335
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/reducers/index.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 243,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								205,
-								205
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/actions/index.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 168,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								168,
-								168
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "src/actions/schema.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 329,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								329,
-								329
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": ".gitignore",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 303,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								303,
-								303
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "/C/Users/alexr/.profile",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 500,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								500,
-								500
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "src/components/App.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 313,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								166,
-								166
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "src/components/Row.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 218,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								158,
-								158
+								375,
+								375
 							]
 						],
 						"settings":
@@ -779,20 +566,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
-					"file": "src/components/RowList.js",
+					"buffer": 1,
+					"file": "src/components/Button.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 195,
+						"buffer_size": 200,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								85,
-								85
+								76,
+								76
 							]
 						],
 						"settings":
@@ -807,20 +594,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
-					"file": "src/api/data.js",
+					"buffer": 2,
+					"file": "src/actions/index.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3009,
+						"buffer_size": 1307,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2980,
-								2993
+								1202,
+								1237
 							]
 						],
 						"settings":
@@ -829,10 +616,242 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1304.0,
+						"translation.y": 322.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/api/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2338,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2333,
+								2333
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 813.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/reducers/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3088,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								627,
+								627
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 261.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 880,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								127,
+								81
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "README.md",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 103850,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								90437,
+								90437
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 31235.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/components/BoardButton.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 402,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								204,
+								204
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/components/RotateSpareSquareButton.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 343,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								227,
+								227
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "src/components/BoardButtonList.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 587,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								434,
+								434
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "src/components/SpareSquare.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 389,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								340,
+								340
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
 					"type": "text"
 				}
 			]

@@ -1,5 +1,6 @@
 export const shapes = ["bend", "tjunction", "straight"]
 export const orientations = {
+	error: { up: false, right: false, down: false, left: false },
 	bend: [
 		{ up: false, right: true, down: true, left: false },
 		{ up: false, right: false, down: true, left: true },
