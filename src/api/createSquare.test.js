@@ -1,124 +1,107 @@
-import {calculateType, calculateOrientation} from './createSquare';
+import createSquare, {calculateType, calculateOrientation} from './createSquare';
 jest.mock('../constants/getRandomArrayItem');
 import getRandomArrayItem from '../constants/getRandomArrayItem';
+jest.mock('node-uuid');
+import { v4 } from 'node-uuid';
 
-test('calculateType returns "tjunction" when given the string "tjunction"', () => {
-	getRandomArrayItem.mockImplementation(() => '')
-	expect(calculateType('tjunction')).toBe('tjunction');
-	expect(getRandomArrayItem).not.toBeCalled();
-	getRandomArrayItem.mockReset();
-});
-test('calculateType return "tjunction" when given the string "tjunction"', () => {
-	getRandomArrayItem.mockImplementation(() => '')
-	expect(calculateType('tjunction')).toBe('tjunction');
-	expect(getRandomArrayItem).not.toBeCalled();
-	getRandomArrayItem.mockReset();
-});
-test('calculateType return "straight" when given the string "straight"', () => {
-	getRandomArrayItem.mockImplementation(() => '')
-	expect(calculateType('straight')).toBe('straight');
-	expect(getRandomArrayItem).not.toBeCalled();
-	getRandomArrayItem.mockReset();
-});
-test('calculateType makes a call to getRandomArrayItem for any given type not in base.shapes', () => {
-	getRandomArrayItem.mockImplementation(() => 'straight')
-	expect(calculateType('any')).toBe('straight');
-	expect(calculateType('hello')).toBe('straight');
-	expect(calculateType(null)).toBe('straight');
-	expect(calculateType(true)).toBe('straight');
-	expect(calculateType({})).toBe('straight');
-	expect(calculateType([])).toBe('straight');
-	expect(getRandomArrayItem).toBeCalled();
-	expect(getRandomArrayItem.mock.calls.length).toBe(6);
-	getRandomArrayItem.mockReset();
-});
-
-test('calculateOrientation should return the correct orientation when supplied straight and 0', () => {
-	getRandomArrayItem.mockImplementation(() => '');
-	const testObject = { up: true, right: false, down: true, left: false };
-	expect(calculateOrientation('straight', 0)).toMatchObject(testObject);
-	expect(getRandomArrayItem).not.toBeCalled();
-	getRandomArrayItem.mockReset();
-});
-
-test('calculateOrientation should return the correct orientation when supplied straight and 1', () => {
-	getRandomArrayItem.mockImplementation(() => '');
-	const testObject = { up: false, right: true, down: false, left: true };
-	expect(calculateOrientation('straight', 1)).toMatchObject(testObject);
-	expect(getRandomArrayItem).not.toBeCalled();
-	getRandomArrayItem.mockReset();
-});
-
-test('calculateOrientation should return the correct orientation when supplied bend and 0', () => {
-	getRandomArrayItem.mockImplementation(() => '');
-	const testObject = { up: false, right: true, down: true, left: false };
-	expect(calculateOrientation('bend', 0)).toMatchObject(testObject);
-	expect(getRandomArrayItem).not.toBeCalled();
-	getRandomArrayItem.mockReset();
-});
-
-test('calculateOrientation should return the correct orientation when supplied bend and 1', () => {
-	getRandomArrayItem.mockImplementation(() => '');
-	const testObject = { up: false, right: false, down: true, left: true };
-	expect(calculateOrientation('bend', 1)).toMatchObject(testObject);
-	expect(getRandomArrayItem).not.toBeCalled();
-	getRandomArrayItem.mockReset();
-});
-
-test('calculateOrientation should return the correct orientation when supplied bend and 2', () => {
-	getRandomArrayItem.mockImplementation(() => '');
-	const testObject = { up: true, right: false, down: false, left: true };
-	expect(calculateOrientation('bend', 2)).toMatchObject(testObject);
-	expect(getRandomArrayItem).not.toBeCalled();
-	getRandomArrayItem.mockReset();
-});
-
-test('calculateOrientation should return the correct orientation when supplied bend and 3', () => {
-	getRandomArrayItem.mockImplementation(() => '');
-	const testObject = { up: true, right: true, down: false, left: false };
-	expect(calculateOrientation('bend', 3)).toMatchObject(testObject);
-	expect(getRandomArrayItem).not.toBeCalled();
-	getRandomArrayItem.mockReset();
-});
-
-test('calculateOrientation should return the correct orientation when supplied tjunction and 0', () => {
-	getRandomArrayItem.mockImplementation(() => '');
-	const testObject = { up: true, right: true, down: true, left: false };
-	expect(calculateOrientation('tjunction', 0)).toMatchObject(testObject);
-	expect(getRandomArrayItem).not.toBeCalled();
-	getRandomArrayItem.mockReset();
-});
-
-test('calculateOrientation should return the correct orientation when supplied tjunction and 1', () => {
-	getRandomArrayItem.mockImplementation(() => '');
-	const testObject = { up: false, right: true, down: true, left: true };
-	expect(calculateOrientation('tjunction', 1)).toMatchObject(testObject);
-	expect(getRandomArrayItem).not.toBeCalled();
-	getRandomArrayItem.mockReset();
-});
-
-test('calculateOrientation should return the correct orientation when supplied tjunction and 2', () => {
-	getRandomArrayItem.mockImplementation(() => '');
-	const testObject = { up: true, right: false, down: true, left: true };
-	expect(calculateOrientation('tjunction', 2)).toMatchObject(testObject);
-	expect(getRandomArrayItem).not.toBeCalled();
-	getRandomArrayItem.mockReset();
+describe('createSquare.js', () => {
+	describe('calculateType', () => {
+		test('given_bend_returns_bend', () => {
+			expect(calculateType('bend')).toBe('bend');
+		});
+		test('given_tjunction_returns_tjunction', () => {
+			expect(calculateType('tjunction')).toBe('tjunction');
+		});
+		test('given_straight_returns_straight', () => {
+			expect(calculateType('straight')).toBe('straight');
+		});
+		test('given_any_calls_getRandomArrayItem', () => {
+			getRandomArrayItem.mockImplementation(() => 'straight')
+			calculateType('any');
+			expect(getRandomArrayItem).toBeCalled();
+			getRandomArrayItem.mockReset();
+		});
+		test('given_null_returns_false', () => {
+			expect(calculateType(null)).toBe(false);
+		});
+		test('given_hello_returns_false', () => {
+			expect(calculateType('hello')).toBe(false);
+		});
+	})
+	describe('calculateOrientation', () => {
+		test('given_straight/0_returns_object', () => {
+			//
+			const testObject = { up: true, right: false, down: true, left: false };
+			expect(calculateOrientation('straight', 0)).toMatchObject(testObject);
+		});
+		test('given_straight/1_returns_object', () => {
+			//
+			const testObject = { up: false, right: true, down: false, left: true };
+			expect(calculateOrientation('straight', 1)).toMatchObject(testObject);
+		});
+		test('given_bend/0_returns_object', () => {
+			const testObject = { up: false, right: true, down: true, left: false };
+			expect(calculateOrientation('bend', 0)).toMatchObject(testObject);
+		});
+		test('given_bend/3_returns_object', () => {
+			const testObject = { up: true, right: true, down: false, left: false };
+			expect(calculateOrientation('bend', 3)).toMatchObject(testObject);
+		});
+		test('given_tjunction/0_returns_object', () => {
+			const testObject = { up: true, right: true, down: true, left: false };
+			expect(calculateOrientation('tjunction', 0)).toMatchObject(testObject);
+		});
+		test('given_tjunction/3_returns_object', () => {
+			const testObject = { up: true, right: true, down: false, left: true };
+			expect(calculateOrientation('tjunction', 3)).toMatchObject(testObject);
+		});
+		test('given_straight/any_returns_object', () => {
+			const testObject = { up: false, right: true, down: false, left: true };
+			getRandomArrayItem.mockImplementation(() => testObject);
+			expect(calculateOrientation('straight', 'any')).toMatchObject(testObject);
+			expect(getRandomArrayItem).toBeCalled();
+			getRandomArrayItem.mockReset();
+		});
+		test('given_straight/-1_returns_false', () => {
+			expect(calculateOrientation('straight', -1)).toBe(false);
+		});
+		test('given_straight/2_returns_false', () => {
+			expect(calculateOrientation('straight', 2)).toBe(false);
+		});
+		test('given_null/null_returns_false', () => {
+			expect(calculateOrientation(null, null)).toBe(false);
+		});
+		test('given_straight/null_returns_false', () => {
+			expect(calculateOrientation('straight', null)).toBe(false);
+		});
+	});
+	describe('createSquare', () => {
+		test('given_correct_object_returns square object', () => {
+			v4.mockImplementation(() => 'abc123');
+			const given = {'type': 'straight', 'orientation': 0};
+			const expected = {"id": "abc123", "orientation": {"down": true, "left": false, "right": false, "up": true}, "type": "straight"}
+			expect(createSquare(given)).toMatchObject(expected);
+		})
+		test('given_{}_returns error object', () => {
+			v4.mockImplementation(() => 'abc123');
+			const given = {};
+			const expected = {"id": "abc123", "error": true};
+			expect(createSquare(given)).toMatchObject(expected);
+		});
+		test('given_false_returns error object', () => {
+			v4.mockImplementation(() => 'abc123');
+			const given = false;
+			const expected = {"id": "abc123", "error": true};
+			expect(createSquare(given)).toMatchObject(expected);
+		});
+		
+	})
 });
 
-test('calculateOrientation should return the correct orientation when supplied tjunction and 3', () => {
-	getRandomArrayItem.mockImplementation(() => '');
-	const testObject = { up: true, right: true, down: false, left: true };
-	expect(calculateOrientation('tjunction', 3)).toMatchObject(testObject);
-	expect(getRandomArrayItem).not.toBeCalled();
-	getRandomArrayItem.mockReset();
-});
 
-test('calculateOrientation should return the base.orientations.error object for a given type that does not exist', () => {
-	getRandomArrayItem.mockImplementation(() => '');
-	const baseOrientationsError = { up: false, right: false, down: false, left: false };
-	expect(calculateOrientation('any', 0)).toMatchObject(baseOrientationsError);
-	expect(calculateOrientation('hello', 2)).toMatchObject(baseOrientationsError);
-	expect(calculateOrientation(null, 'hello')).toMatchObject(baseOrientationsError);
-	expect(getRandomArrayItem).not.toBeCalled();
-	getRandomArrayItem.mockReset();
-});
+
+
+
+
+
+

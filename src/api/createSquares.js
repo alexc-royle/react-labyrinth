@@ -4,7 +4,7 @@ const createSquares = (row, squareList) => {
 		if(!square) {
 			square = squareList.pop();
 		}
-		return createSquare(square.type, square.orientation);
+		return createSquare(square);
 	});
 }
 export default createSquares;
