@@ -3,10 +3,10 @@ import createRows from './createRows';
 import { createSingleSquare } from './createSquare';
 import { board } from './baseData';
 
-const createBoard = (squareList) => ({
+const createBoard = (squareList, cardList) => ({
 	id: v4(), 
-	rows: createRows(board, squareList), 
-	spare: createSingleSquare(squareList.pop())
+	rows: createRows(board, squareList, cardList), 
+	spare: createSingleSquare(squareList.pop(), cardList)
 });
 
 export default createBoard;

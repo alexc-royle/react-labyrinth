@@ -38,6 +38,18 @@ const squaresById = (state = {}, action) => {
 	}
 }
 
+const cardsById = (state = {}, action) => {
+	switch(action.type) {
+		case "FETCH_NEW_BOARD_REQUEST_SUCCESS":
+			return {
+				...state,
+				...action.response.entities.cards
+			};
+		default: 
+			return state;
+	}
+}
+
 const rowIdsByBoardId = (state={}, action) => {
 	switch(action.type) {
 		case "FETCH_NEW_BOARD_REQUEST_SUCCESS":
@@ -69,6 +81,25 @@ const squareIdsByRowId = (state={}, action) => {
 		default:
 			return state;
 
+	}
+}
+
+const cardIdsBySquareId = (state = {}, action) => {
+	switch(action.type) {
+		case "FETCH_NEW_BOARD_REQUEST_SUCCESS":
+			var squares = action.response.entities.squares;
+			var cardsToSquares = {};
+			for(var squareId in squares) {
+				const square = squares[squareId];
+				if(square.image)
+					cardsToSquares[squareId] = square.image;
+			}
+			return {
+				...state,
+				...cardsToSquares
+			}
+		default:
+			return state;
 	}
 }
 
@@ -105,8 +136,10 @@ const game = combineReducers({
 	boardsById,
 	rowsById,
 	squaresById,
+	cardsById,
 	rowIdsByBoardId,
 	squareIdsByRowId,
+	cardIdsBySquareId,
 	currentBoard,
 	spareSquare
 });
@@ -142,3 +175,6 @@ export const getNumberOfRows = (state) => state.currentBoard.numberOfRows;
 export const getNumberOfColumns = (state) => state.currentBoard.numberOfColumns;
 
 export const getSpareSquare = (state) => getSquare(state.squaresById, state.spareSquare);
+
+export const getCard = (state, id) => state[id];
+// const getCardForSquare = (state, id) => getCard(state.cardsById, )

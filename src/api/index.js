@@ -1,4 +1,4 @@
-import { squareData } from './baseData';
+import { squareData, cardData } from './baseData';
 import createBoard from './createBoard';
 import shuffle from '../constants/shuffleArray';
 
@@ -9,7 +9,9 @@ const getBoard = boardId => boards[boardId];
 export const fetchNewBoard = () => new Promise(
 	resolve => {
 		const squareList = shuffle(squareData);
-		const newBoard = createBoard(squareList);
+		const cardList = shuffle(cardData);
+		console.log(cardData);
+		const newBoard = createBoard(squareList, cardList);
 		boards = {...boards, [newBoard.id]: newBoard};
 		resolve(newBoard)
 	}
