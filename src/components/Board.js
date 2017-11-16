@@ -5,17 +5,12 @@ import '../css/Board.css';
 const Board = ({
 	id
 }) => (
-		<div className='outerBoard'>
-			<BoardButtonListContainer boardId={id} orientation={'down'} type={'column'}/>
-			<div className="innerBoard">
-				<BoardButtonListContainer boardId={id} orientation={'right'} type={'row'}/>
-				<div className="board">
+		<div className="boardContainer">
+			<div className="board">
+				<div className="boardInner">
 					<RowListContainer boardId={id}/>
 				</div>
-				<BoardButtonListContainer boardId={id} orientation={'left'} type={'row'}/>
 			</div>
-			
-			<BoardButtonListContainer boardId={id} orientation={'up'}  type={'column'}/>
 		</div>
 );
 export default Board;

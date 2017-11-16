@@ -9,7 +9,6 @@ class SpareSquareContainer extends React.Component {
 	render() {
 		if(this.props.square) {
 			const { rotateSpareSquare } = this.props;
-			console.log(rotateSpareSquare);
 			return (
 				<SpareSquare square={this.props.square} onButtonClick={rotateSpareSquare}/>
 			);

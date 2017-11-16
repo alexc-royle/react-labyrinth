@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import * as actions from '../actions';
-import { getCard } from '../reducers';
+import { getCardByItemId } from '../reducers';
 import SquareImage from '../components/SquareImage';
 
 class SquareImageContainer extends React.Component {
@@ -13,18 +13,21 @@ class SquareImageContainer extends React.Component {
 	componentDidUpdate(prevProps) {}
 
 	render() {
-		return (
-			<SquareImage
-				{...this.props.image}
-			/>
-		);
+		if(this.props.image) {
+			return (
+				<SquareImage
+					{...this.props.image}
+				/>
+			);
+		}
+		return null;
 	}
 }
 
 
 const mapStateToProps = (state, props) => {
 	return {
-		image: getCard(state.cardsById, props.imageId),
+		image: getCardByItemId(state, props.squareId),
 	}
 };
 

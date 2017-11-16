@@ -2,17 +2,17 @@ import React from 'react';
 import Button from './Button';
 import '../css/BoardButton.css';
 
+
 const BoardButton = ({
-	show,
-	orientation,
-	onButtonClick
+	type,
+	data,
+	onButtonClick,
+	disabled
 }) => {
-	let content = <Button onClick={onButtonClick} displayText={orientation} classNames={''}/>;
-	if(!show) {
-		content = <span/>;
-	}
+	const glyphIcon = 'glyphicon-chevron-' + data.text;
+	const content = <Button onClick={() => onButtonClick(data.direction, data.itemNumber)} displayText={data.text} classNames={''} glyphIcon={glyphIcon} disabled={disabled}/>;
 	return (
-		<div className={'boardButton ' + orientation}>
+		<div className={'boardItem boardButton ' + data.classNames}>
 			{content}
 		</div>
 	)

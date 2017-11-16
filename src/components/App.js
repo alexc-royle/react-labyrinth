@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import BoardContainer from '../containers/BoardContainer';
-import SpareSquareContainer from '../containers/SpareSquareContainer';
+import PlayerSelectionFormContainer from '../containers/PlayerSelectionFormContainer';
+import GameContainer from '../containers/GameContainer';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <BoardContainer/>
-        <SpareSquareContainer/>
+      	<PlayerSelectionFormContainer/>
+      	<GameContainer/>
       </div>
     );
   }

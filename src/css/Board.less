@@ -1,10 +1,28 @@
-.board {
-	float: left;
-}
-
-.outerBoard {
+.boardContainer {
 	display: inline-block;
 	border: 2px solid black;
 	border-radius: 5px;
 	background-color: rgba(50,50,255, 0.5);
+	width: 100%;
+	position: relative;
+	&:before {
+		content: '';
+		display: block;
+		padding-top: 100%;
+	}
+	.board {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		.boardInner {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+			align-content: space-between;
+			height: 100%;
+		}
+	}
 }

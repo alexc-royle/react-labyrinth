@@ -1,21 +1,22 @@
-import { v4 } from 'node-uuid';
+
 import * as base from './baseData';
 import getRandomArrayItem from '../constants/getRandomArrayItem';
+import { v4 } from 'node-uuid';
 
 export const calculateType = (squareData) => {
-	let type = squareData.type;
-	if(type==='any') return getRandomArrayItem(base.shapes);
-	if(base.shapes.includes(type) === false) return false;
-	return type;
+	let shape = squareData.shape;
+	if(shape==='any') return getRandomArrayItem(base.shapes);
+	if(base.shapes.includes(shape) === false) return false;
+	return shape;
 }
 
 export const calculateOrientation = (squareData) => {
-	let type = squareData.type;
+	let shape = squareData.shape;
 	let orientation = squareData.orientation;
-	if(base.orientations.hasOwnProperty(type) === false) return false;
-	if(orientation==='any') return getRandomArrayItem(base.orientations[type]);
-	if(typeof base.orientations[type][orientation] === 'undefined') return false;
-	return base.orientations[type][orientation];
+	if(base.orientations.hasOwnProperty(shape) === false) return false;
+	if(orientation==='any') return getRandomArrayItem(base.orientations[shape]);
+	if(typeof base.orientations[shape][orientation] === 'undefined') return false;
+	return base.orientations[shape][orientation];
 }
 
 export const calculateImage = (squareData, cardList) => {
@@ -26,22 +27,27 @@ export const calculateImage = (squareData, cardList) => {
 }
 
 
-const createSquare = (squareData, cardList) => {
-	let returnData = { id: v4()};
-	if(typeof squareData === 'object') {
+const createSquare = (square, cardList) => {
+	if(square && square.data) {
+		let squareData = {...square.data};
 		const squareType = calculateType(squareData);
 		const squareOrientation = calculateOrientation(squareData);
 		if(squareType && squareOrientation) {
 			const squareImage = calculateImage(squareData, cardList);
-			if(squareImage) returnData.image = squareImage;
-			returnData.type = squareType;
-			returnData.orientation = squareOrientation;
+			if(squareImage) squareData.image = squareImage;
+			squareData.type = squareType;
+			squareData.orientation = squareOrientation;
 		} else {
-			returnData.error = true;
+			squareData.error = true;
 		}
+		return {...square, data: squareData};
+	} else {
+		return {error: true};
 	}
-	return returnData;
 }
 export default createSquare;
 
-export const createSingleSquare = (squareData, cardList) => createSquare(squareData, cardList)
+export const createSingleSquare = (squareData, cardList) => {
+	let square = {id: v4(), type: 'square', data: {...squareData}}
+	return createSquare(square, cardList)
+}

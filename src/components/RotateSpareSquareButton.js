@@ -6,7 +6,7 @@ const RotateSpareSquareButton = ({
 	onButtonClick
 }) => (
 	<div className={'rotateSpareSquareHolder'}>
-		<Button onClick={onButtonClick} displayText={'Rotate'} classNames={'rotateSpareSquareButton'}/>
+		<Button onClick={onButtonClick} displayText={'Rotate'} classNames={'rotateSpareSquareButton'} glyphIcon={'glyphicon-repeat'}/>
 	</div>
 );
 export default RotateSpareSquareButton;

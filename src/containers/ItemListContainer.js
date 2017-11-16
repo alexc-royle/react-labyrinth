@@ -1,10 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import * as actions from '../actions';
-import { getSquare } from '../reducers';
-import Square from '../components/Square';
+import { getItemsForRow } from '../reducers';
+import ItemList from '../components/ItemList';
 
-class SquareContainer extends React.Component {
+class ItemListContainer extends React.Component {
 	componentDidMount() {
 		//this.fetchData();
 
@@ -14,9 +14,7 @@ class SquareContainer extends React.Component {
 
 	render() {
 		return (
-			<Square
-				{...this.props.square}
-			/>
+			<ItemList items={this.props.items}/>
 		);
 	}
 }
@@ -24,13 +22,13 @@ class SquareContainer extends React.Component {
 
 const mapStateToProps = (state, props) => {
 	return {
-		square: getSquare(state.squaresById, props.squareId),
+		items: getItemsForRow(state, props.rowId),
 	}
 };
 
-SquareContainer = connect(
+ItemListContainer = connect(
 	mapStateToProps,
 	actions
-)(SquareContainer);
+)(ItemListContainer);
 
-export default SquareContainer
+export default ItemListContainer

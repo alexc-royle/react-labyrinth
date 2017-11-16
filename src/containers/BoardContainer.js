@@ -1,21 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import * as actions from '../actions';
-import { getCurrentBoard } from '../reducers';
+import { getCurrentBoard, getPlayerFormCompleted } from '../reducers';
 import Board from '../components/Board';
 
 class BoardContainer extends React.Component {
-	componentDidMount() {
-		this.fetchData();
-
-	}
+	componentDidMount() {}
 
 	componentDidUpdate(prevProps) {}
-
-	fetchData() {
-		const { fetchNewBoard } = this.props;
-		fetchNewBoard().then(() => console.log('done!'));
-	}
 
 	render() {
 		if(this.props.board) {

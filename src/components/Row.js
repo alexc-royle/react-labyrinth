@@ -1,13 +1,12 @@
 import React from 'react';
-import SquareListContainer from '../containers/SquareListContainer';
+import ItemListContainer from '../containers/ItemListContainer';
 import '../css/Row.css';
 
 const Row = ({
 	rowId
 }) => (
 	<div className="row">
-		<SquareListContainer rowId={rowId}/>
-		<div className="clearBoth"/>
+		<ItemListContainer rowId={rowId}/>
 	</div>
 )
 

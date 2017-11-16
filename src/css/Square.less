@@ -1,81 +1,91 @@
 @import "variables.less";
 
+.boardItem {
+	width: 9.5%;
+}
+
 .square {
+	position: relative;
 	background-color: blue;
-	width: 50px;
-	height:50px;
 	border-radius: 5px;
-	float: left;
-	margin: 2px;
-	.walls-top {
-		.wall-left {
-			border-radius: 5px 0 0 0;
-		}
-		.wall-right {
-			border-radius: 0 5px 0 0;
-		}
+	&:before {
+		content: '';
+		display: block;
+		padding-top: 100%;
 	}
-	.walls-bottom {
-		.wall-left {
-			border-radius: 0 0 0 5px;
-		}
-		.wall-right {
-			border-radius: 0 0 5px 0;
-		}
-	}
-	div {
-		background-color: @wall-colour;
-		clear: both;
-		div {
-			float: left;
-			clear: none;
-		}
-	}
-	.walls-top, .walls-bottom {
-		div {
-			height: 10px;
-		}
-	}
-	.walls-middle {
-		div {
-			height: 30px;
-		}
-	}
-	.wall-left, .wall-right {
-		width: 10px;
-	}
-	.wall-centre {
-		width: 30px;
-	}
-	.walls-middle {
-		.wall-centre {
-			background-color: @floor-colour;
+	.innerSquare {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+		.wallContainer {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+
+			.walls {
+				display: flex;
+				flex-direction: row;
+				height: 20%;
+				.wall {
+					width: 20%;
+					background-color: @wall-colour;
+					&.centre {
+						width: 60%;
+					}
+				}
+				&.middle {
+					height: 60%;
+					.centre {
+						background-color: @floor-colour;
+					}
+				}
+				&.top {
+					.left {
+						border-radius: 5px 0 0 0;
+					}
+					.right {
+						border-radius: 0 5px 0 0;
+					}
+				}
+				&.bottom {
+					.left {
+						border-radius: 0 0 0 5px;
+					}
+					.right {
+						border-radius: 0 0 5px 0;
+					}
+				}
+
+			}
 		}
 	}
 	&.up {
-		.walls-top {
-			.wall-centre {
+		.walls.top {
+			.centre {
 				background-color: @floor-colour;
 			}
 		}
 	}
 	&.down {
-		.walls-bottom {
-			.wall-centre {
+		.walls.bottom {
+			.centre {
 				background-color: @floor-colour;
 			}
 		}
 	}
 	&.left {
-		.walls-middle {
-			.wall-left {
+		.walls.middle {
+			.left {
 				background-color: @floor-colour;
 			}
 		}
 	}
 	&.right {
-		.walls-middle {
-			.wall-right {
+		.walls.middle {
+			.right {
 				background-color: @floor-colour;
 			}
 		}

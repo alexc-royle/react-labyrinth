@@ -20,53 +20,115 @@ export const orientations = {
 	]
 };
 
+
+
 export const board = [
 	[
-		{type: 'bend', orientation: 0, hasImage: false},
-		null,
-		{type: 'tjunction', orientation: 1, hasImage: true},
-		null,
-		{type: 'tjunction', orientation: 1, hasImage: true},
-		null,
-		{type: 'bend', orientation: 1, hasImage: false}
+		{type: 'empty', data: false},
+		{type: 'empty', data: false},
+		{type: 'boardButton', data: {text: 'down', direction: 'down', itemNumber: 2}},
+		{type: 'empty', data: false},
+		{type: 'boardButton', data: {text: 'down', direction: 'down', itemNumber: 4}},
+		{type: 'empty', data: false},
+		{type: 'boardButton', data: {text: 'down', direction: 'down', itemNumber: 6}},
+		{type: 'empty', data: false},
+		{type: 'empty', data: false}
 	],
-	Array(7).fill(null),
 	[
-		{type: 'tjunction', orientation: 0, hasImage: true},
-		null,
-		{type: 'tjunction', orientation: 0, hasImage: true},
-		null,
-		{type: 'tjunction', orientation: 1, hasImage: true},
-		null,
-		{type: 'tjunction', orientation: 2, hasImage: true}
+		{type: 'empty', data: false},
+		{type: 'square', data: {shape: 'bend', orientation: 0, hasImage: false, }},
+		{type: 'square', data: false},
+		{type: 'square', data: {shape: 'tjunction', orientation: 1, hasImage: true, }},
+		{type: 'square', data: false},
+		{type: 'square', data: {shape: 'tjunction', orientation: 1, hasImage: true, }},
+		{type: 'square', data: false},
+		{type: 'square', data: {shape: 'bend', orientation: 1, hasImage: false, }},
+		{type: 'empty', data: false}
 	],
-	Array(7).fill(null),
 	[
-		{type: 'tjunction', orientation: 0, hasImage: true},
-		null,
-		{type: 'tjunction', orientation: 3, hasImage: true},
-		null,
-		{type: 'tjunction', orientation: 2, hasImage: true},
-		null,
-		{type: 'tjunction', orientation: 2, hasImage: true}
+		{type: 'boardButton', data: {text: 'right', direction: 'right', itemNumber: 2}},
+		{type: 'square', data: false},
+		{type: 'square', data: false},
+		{type: 'square', data: false},
+		{type: 'square', data: false},
+		{type: 'square', data: false},
+		{type: 'square', data: false},
+		{type: 'square', data: false},
+		{type: 'boardButton', data: {text: 'left', direction: 'left', itemNumber: 2}},
+	],
+	[
+		{type: 'empty', data: false},
+		{type: 'square', data: {shape: 'tjunction', orientation: 0, hasImage: true, }},
+		{type: 'square', data: false},
+		{type: 'square', data: {shape: 'tjunction', orientation: 0, hasImage: true, }},
+		{type: 'square', data: false},
+		{type: 'square', data: {shape: 'tjunction', orientation: 1, hasImage: true, }},
+		{type: 'square', data: false},
+		{type: 'square', data: {shape: 'tjunction', orientation: 2, hasImage: true, }},
+		{type: 'empty', data: false}
+	],
+	[
+		{type: 'boardButton', data: {text: 'right', direction: 'right', itemNumber: 4}},
+		{type: 'square', data: false},
+		{type: 'square', data: false},
+		{type: 'square', data: false},
+		{type: 'square', data: false},
+		{type: 'square', data: false},
+		{type: 'square', data: false},
+		{type: 'square', data: false},
+		{type: 'boardButton', data: {text: 'left', direction: 'left', itemNumber: 4}},
+	],
+	[
+		{type: 'empty', data: false},
+		{type: 'square', data: {shape: 'tjunction', orientation: 0, hasImage: true, }},
+		{type: 'square', data: false},
+		{type: 'square', data: {shape: 'tjunction', orientation: 3, hasImage: true, }},
+		{type: 'square', data: false},
+		{type: 'square', data: {shape: 'tjunction', orientation: 2, hasImage: true, }},
+		{type: 'square', data: false},
+		{type: 'square', data: {shape: 'tjunction', orientation: 2, hasImage: true, }},
+		{type: 'empty', data: false}
 	], 
-	Array(7).fill(null), 
 	[
-		{type: 'bend', orientation: 3, hasImage: false},
-		null,
-		{type: 'tjunction', orientation: 3, hasImage: true},
-		null,
-		{type: 'tjunction', orientation: 3, hasImage: true},
-		null,
-		{type: 'bend', orientation: 2, hasImage: false}
+		{type: 'boardButton', data: {text: 'right', direction: 'right', itemNumber: 6}},
+		{type: 'square', data: false},
+		{type: 'square', data: false},
+		{type: 'square', data: false},
+		{type: 'square', data: false},
+		{type: 'square', data: false},
+		{type: 'square', data: false},
+		{type: 'square', data: false},
+		{type: 'boardButton', data: {text: 'left', direction: 'left', itemNumber: 6}},
+	],
+	[
+		{type: 'empty', data: false},
+		{type: 'square', data: {shape: 'bend', orientation: 3, hasImage: false, }},
+		{type: 'square', data: false},
+		{type: 'square', data: {shape: 'tjunction', orientation: 3, hasImage: true, }},
+		{type: 'square', data: false},
+		{type: 'square', data: {shape: 'tjunction', orientation: 3, hasImage: true, }},
+		{type: 'square', data: false},
+		{type: 'square', data: {shape: 'bend', orientation: 2, hasImage: false, }},
+		{type: 'empty', data: false}
+	],
+	[
+		{type: 'empty', data: false},
+		{type: 'empty', data: false},
+		{type: 'boardButton', data: {text: 'up', direction: 'up', itemNumber: 2}},
+		{type: 'empty', data: false},
+		{type: 'boardButton', data: {text: 'up', direction: 'up', itemNumber: 4}},
+		{type: 'empty', data: false},
+		{type: 'boardButton', data: {text: 'up', direction: 'up', itemNumber: 6}},
+		{type: 'empty', data: false},
+		{type: 'empty', data: false}
 	]
 ];
 
 export const squareData = [
-	...Array(6).fill({type: 'bend', orientation: 'any', hasImage: true}),
-	...Array(10).fill({type: 'bend', orientation: 'any', hasImage: false}),
-	...Array(6).fill({'type': 'tjunction', orientation: 'any', hasImage: true}),
-	...Array(12).fill({'type': 'straight', orientation: 'any', hasImage: false})
+	...Array(6).fill({shape: 'bend', orientation: 'any', hasImage: true, }),
+	...Array(10).fill({shape: 'bend', orientation: 'any', hasImage: false, }),
+	...Array(6).fill({shape: 'tjunction', orientation: 'any', hasImage: true, }),
+	...Array(12).fill({shape: 'straight', orientation: 'any', hasImage: false, })
 ];
 
 export const cardData = [
