@@ -1,7 +1,7 @@
 import { normalize } from 'normalizr';
 import * as api from '../api';
 import * as schema from './schema';
-import {getCurrentBoard, getSpareSquare, getSquareIdFromRowAndColumn, getSquaresAroundSquareFromRowAndColumn, getCurrentPlayer} from '../reducers';
+import {getCurrentBoard, getItem, getSpareSquare, getSquareIdFromRowAndColumn, getSquaresAroundSquareFromRowAndColumn, getCurrentPlayer} from '../reducers';
 
 export const fetchNewBoard = () => (dispatch, getState) => {
 	dispatch({
@@ -19,32 +19,36 @@ export const fetchNewBoard = () => (dispatch, getState) => {
 	)
 }
 
-export const insertSpareSquare = (direction, itemNumber) => (dispatch, getState) => {
+export const insertSpareSquare = (itemId) => (dispatch, getState) => {
 	const currentState = getState();
 	const board = getCurrentBoard(currentState);
+	const boardButton = getItem(currentState.itemsById, itemId);
+	console.log(itemId, boardButton);
 	dispatch({
 		type: 'INSERT_SPARE_SQUARE_REQUEST'
 	})
 	return api.insertSpareSquare(
 		board.id, 
-		direction, 
-		itemNumber
+		boardButton.data.direction, 
+		boardButton.data.itemNumber
 	).then(response => {
 		dispatch({
 			type: 'INSERT_SPARE_SQUARE_REQUEST_SUCCESS',
-			response: normalize(response, schema.boardSchema)
+			response: normalize(response, schema.boardSchema),
+			buttonId: itemId
 		})
 	})
 }
 
 export const rotateSpareSquare = () => (dispatch, getState) => {
 	const currentState = getState();
+	const board = getCurrentBoard(currentState);
 	const square = getSpareSquare(currentState);
 	dispatch({
 		type: 'ROTATE_SPARE_SQUARE_REQUEST'
 	});
 	
-	return api.rotateSquare(square).then(response => {
+	return api.rotateSpareSquare(board.id, square).then(response => {
 		dispatch({
 			type: 'ROTATE_SPARE_SQUARE_REQUEST_SUCCESS',
 			response: normalize(response, schema.itemSchema)

@@ -276,7 +276,7 @@ const coloursList = (state=[], action) => {
 				{"text": "dark blue", "value": "#673ab7"}, 
 				{"text": "light blue", "value": "#2196f3"},
 				{"text": "dark green", "value": "#4caf50"},  
-				{"text": "light green", "value": "8bc34a"},
+				{"text": "light green", "value": "#8bc34a"},
 				{"text": "yellow", "value": "#ffeb3b"}, 
 				{"text": "orange", "value": "#ff9800"}, 
 				{"text": "brown", "value": "#795548"}, 

@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"new",
+				"newPosition"
+			],
+			[
 				"p",
 				"position"
 			],
@@ -168,10 +172,6 @@
 				"passwordHash"
 			],
 			[
-				"new",
-				"newPersonAuth"
-			],
-			[
 				"pag",
 				"page_views"
 			],
@@ -184,120 +184,28 @@
 	"buffers":
 	[
 		{
-			"file": "src/containers/ItemContainer.js",
+			"file": "src/actions/index.js",
 			"settings":
 			{
-				"buffer_size": 1004,
+				"buffer_size": 3459,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/css/Row.less",
+			"file": "/C/Program Files/Git/ReleaseNotes.html",
 			"settings":
 			{
-				"buffer_size": 156,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/css/Square.less",
-			"settings":
-			{
-				"buffer_size": 1272,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/index.js",
-			"settings":
-			{
-				"buffer_size": 307,
+				"buffer_size": 115101,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/reducers/index.js",
+			"file": "src/api/index.js",
 			"settings":
 			{
-				"buffer_size": 10139,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/Button.js",
-			"settings":
-			{
-				"buffer_size": 289,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/containers/SquareImageContainer.js",
-			"settings":
-			{
-				"buffer_size": 705,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/api/baseData.js",
-			"settings":
-			{
-				"buffer_size": 7256,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/BoardButton.js",
-			"settings":
-			{
-				"buffer_size": 441,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/PlayerForm.js",
-			"settings":
-			{
-				"buffer_size": 932,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\n    <meta name=\"theme-color\" content=\"#000000\">\n    <!--\n      manifest.json provides metadata used when your web app is added to the\n      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/\n    -->\n    <link rel=\"manifest\" href=\"%PUBLIC_URL%/manifest.json\">\n    <link rel=\"shortcut icon\" href=\"%PUBLIC_URL%/favicon.ico\">\n    \n    <!--\n      Notice the use of %PUBLIC_URL% in the tags above.\n      It will be replaced with the URL of the `public` folder during the build.\n      Only files inside the `public` folder can be referenced from the HTML.\n\n      Unlike \"/favicon.ico\" or \"favicon.ico\", \"%PUBLIC_URL%/favicon.ico\" will\n      work correctly both with client-side routing and a non-root public URL.\n      Learn how to configure a non-root public URL by running `npm run build`.\n    -->\n    <title>React App</title>\n  </head>\n  <body>\n    <noscript>\n      You need to enable JavaScript to run this app.\n    </noscript>\n    <div id=\"root\"></div>\n    <!--\n      This HTML file is a template.\n      If you open it directly in the browser, you will see an empty page.\n\n      You can add webfonts, meta tags, or analytics to this file.\n      The build step will place the bundled scripts into the <body> tag.\n\n      To begin the development, run `npm start` or `yarn start`.\n      To create a production bundle, use `npm run build` or `yarn build`.\n    -->\n  </body>\n</html>\n",
-			"file": "public/index.html",
-			"file_size": 1590,
-			"file_write_time": 131466087104984659,
-			"settings":
-			{
-				"buffer_size": 1595,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/components/PlayerSelectionForm.js",
-			"settings":
-			{
-				"buffer_size": 842,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/Square.js",
-			"settings":
-			{
-				"buffer_size": 1254,
+				"buffer_size": 6446,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -350,50 +258,65 @@
 	[
 		"/F/development/labyrinth",
 		"/F/development/labyrinth/public",
-		"/F/development/labyrinth/public/bootstrap-3.3.7-dist",
-		"/F/development/labyrinth/src"
+		"/F/development/labyrinth/src",
+		"/F/development/labyrinth/src/actions",
+		"/F/development/labyrinth/src/api",
+		"/F/development/labyrinth/src/css",
+		"/F/development/labyrinth/src/reducers"
 	],
 	"file_history":
 	[
-		"/F/development/labyrinth/src/api/index.js",
-		"/F/development/labyrinth/src/api/baseData.js",
-		"/F/development/labyrinth/src/api/createSquare.js",
-		"/F/development/labyrinth/src/containers/ItemListContainer.js",
+		"/F/development/labyrinth/src/api/createBoard.js",
+		"/F/development/labyrinth/src/containers/EndTurnContainer.js",
 		"/F/development/labyrinth/src/reducers/index.js",
+		"/F/development/labyrinth/src/components/Button.js",
+		"/F/development/labyrinth/src/containers/SpareSquareContainer.js",
+		"/F/development/labyrinth/src/containers/ItemContainer.js",
+		"/F/development/labyrinth/src/containers/DirectionArrowContainer.js",
+		"/F/development/labyrinth/public/index.html",
+		"/F/development/labyrinth/src/css/fonts.less",
+		"/F/development/labyrinth/src/components/App.js",
+		"/F/development/labyrinth/src/components/BoardButton.js",
+		"/F/development/labyrinth/src/api/index.js",
+		"/F/development/labyrinth/src/api/createItems.js",
+		"/F/development/labyrinth/src/containers/GameContainer.js",
+		"/F/development/labyrinth/src/components/PlayerInfoList.js",
+		"/F/development/labyrinth/src/components/PlayerInfo.js",
+		"/F/development/labyrinth/src/containers/PlayerInfoListContainer.js",
+		"/F/development/labyrinth/src/api/baseData.js",
+		"/F/development/labyrinth/src/components/PlayerCounterList.js",
+		"/F/development/labyrinth/src/actions/index.js",
+		"/F/development/labyrinth/src/containers/PlayerCounterContainer.js",
+		"/F/development/labyrinth/src/api/createSquare.js",
+		"/F/development/labyrinth/src/components/RotateSpareSquareButton.js",
+		"/F/development/labyrinth/src/css/Row.less",
+		"/F/development/labyrinth/src/css/Square.less",
+		"/F/development/labyrinth/src/index.js",
+		"/F/development/labyrinth/src/containers/SquareImageContainer.js",
+		"/F/development/labyrinth/src/components/PlayerForm.js",
+		"/F/development/labyrinth/src/components/PlayerSelectionForm.js",
 		"/F/development/labyrinth/src/components/Square.js",
+		"/F/development/labyrinth/src/containers/ItemListContainer.js",
 		"/F/development/labyrinth/src/components/ItemList.js",
 		"/F/development/labyrinth/src/components/Row.js",
 		"/F/development/labyrinth/src/actions/schema.js",
-		"/F/development/labyrinth/src/actions/index.js",
 		"/F/development/labyrinth/src/api/createRow.js",
 		"/F/development/labyrinth/package.json",
 		"/F/development/labyrinth/src/components/RowList.js",
-		"/F/development/labyrinth/src/css/Row.less",
 		"/F/development/labyrinth/src/components/Board.js",
 		"/F/development/labyrinth/src/css/Board.less",
-		"/F/development/labyrinth/src/css/Square.less",
-		"/F/development/labyrinth/src/api/createItems.js",
 		"/F/development/labyrinth/src/components/SquareList.js",
 		"/F/development/labyrinth/src/containers/SquareContainer.js",
-		"/F/development/labyrinth/src/containers/DirectionArrowContainer.js",
-		"/F/development/labyrinth/src/containers/PlayerCounterContainer.js",
-		"/F/development/labyrinth/src/containers/SquareImageContainer.js",
-		"/F/development/labyrinth/src/containers/GameContainer.js",
 		"/F/development/labyrinth/src/containers/BoardContainer.js",
 		"/F/development/labyrinth/src/containers/PlayerSelectionFormContainer.js",
 		"/F/development/labyrinth/src/components/PlayerCounter.js",
-		"/F/development/labyrinth/src/components/Button.js",
-		"/F/development/labyrinth/src/components/PlayerCounterList.js",
 		"/F/development/labyrinth/src/css/PlayerCounter.less",
 		"/F/development/labyrinth/src/containers/ControlsContainer.js",
 		"/F/development/labyrinth/src/containers/SquarePlayerContainer.js",
-		"/F/development/labyrinth/src/components/PlayerSelectionForm.js",
 		"/F/development/labyrinth/src/components/SquareImage.js",
 		"/F/development/labyrinth/src/components/SquarePlayerList.js",
 		"/F/development/labyrinth/src/components/SquarePlayer.js",
 		"/F/development/labyrinth/src/components/PlayerFormList.js",
-		"/F/development/labyrinth/src/components/PlayerForm.js",
-		"/F/development/labyrinth/src/containers/SpareSquareContainer.js",
 		"/F/development/labyrinth/src/components/SpareSquare.js",
 		"/F/development/labyrinth/src/components/InputBox.js",
 		"/F/development/labyrinth/src/components/SelectBox.js",
@@ -402,7 +325,6 @@
 		"/F/development/tutorials/react/react-connectfour/src/Board.js",
 		"/F/development/tutorials/react/react-connectfour/src/Column.js",
 		"/F/development/tutorials/react/react-connectfour/src/Game.js",
-		"/F/development/labyrinth/src/components/App.js",
 		"/F/development/tutorials/react/redux-todo-tutorial/src/reducers/index.js",
 		"/F/development/tutorials/react/redux-todo-tutorial/src/reducers/createList.js",
 		"/F/development/tutorials/react/react-redux-tutorial/src/multiple-counter.test.js",
@@ -416,14 +338,10 @@
 		"/F/development/labyrinth/src/api/createSquare.test.js",
 		"/F/development/labyrinth/src/api/createSquares.test.js",
 		"/F/development/labyrinth/src/api/createSquares.js",
-		"/F/development/labyrinth/src/api/createBoard.js",
 		"/F/development/labyrinth/src/api/createRows.js",
-		"/F/development/labyrinth/src/components/BoardButton.js",
-		"/F/development/labyrinth/src/components/RotateSpareSquareButton.js",
 		"/F/development/labyrinth/src/components/BoardButtonList.js",
 		"/F/development/labyrinth/src/constants/getRandomArrayItem.js",
 		"/F/development/labyrinth/src/constants/shuffleArray.js",
-		"/F/development/labyrinth/src/index.js",
 		"/F/development/labyrinth/src/containers/BoardButtonListContainer.js",
 		"/F/development/labyrinth/src/css/BoardButton.less",
 		"/F/development/labyrinth/src/css/BoardButton.css",
@@ -475,14 +393,7 @@
 		"/F/development/tutorials/react/redux-todo-tutorial/src/reducers/visibilityFilter.js",
 		"/F/development/tutorials/react/redux-todo-tutorial/src/containers/TodoApp.js",
 		"/F/development/tutorials/react/react-redux-tutorial/package.json",
-		"/F/development/tutorials/react/react-redux-tutorial/src/index.js",
-		"/F/development/tutorials/react/react-redux-tutorial/src/todo.js",
-		"/F/development/tutorials/react/react-redux-tutorial/src/counter.test.js",
-		"/F/development/tutorials/react/react-redux-tutorial/src/react-simple-counter.js",
-		"/F/development/tutorials/react/react-redux-tutorial/src/simple-counter.js",
-		"/F/development/tutorials/react/react-redux-todo/src/index.js",
-		"/F/development/tutorials/react/react-redux-todo/package.json",
-		"/F/development/tutorials/react/react-redux-counter/src/index.js"
+		"/F/development/tutorials/react/react-redux-tutorial/src/index.js"
 	],
 	"find":
 	{
@@ -500,6 +411,11 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"EndturnContainer",
+			"DirectionArrowContainer",
+			"players: []",
+			"console",
+			"classNames",
 			"getCardBySquareId",
 			"Adding Bootstrap",
 			"adding-bootstrap",
@@ -560,6 +476,10 @@
 		"regex": false,
 		"replace_history":
 		[
+			"PlayerInfoListContainer",
+			"EndturnContainer",
+			"",
+			"direction",
 			"ItemContainer",
 			"ItemListContainer",
 			"', data:",
@@ -599,24 +519,24 @@
 	"groups":
 	[
 		{
-			"selected": 10,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/containers/ItemContainer.js",
+					"file": "src/actions/index.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1004,
+						"buffer_size": 3459,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								736,
-								745
+								1318,
+								1318
 							]
 						],
 						"settings":
@@ -625,292 +545,32 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/css/Row.less",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 156,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								19,
-								19
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/css/Square.less",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1272,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								51,
-								51
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/index.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 307,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								194,
-								194
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 242.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "src/reducers/index.js",
+					"buffer": 1,
+					"file": "/C/Program Files/Git/ReleaseNotes.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10139,
+						"buffer_size": 115101,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7235,
-								7235
+								743,
+								743
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 4478.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/components/Button.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 289,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								206,
-								206
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "src/containers/SquareImageContainer.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 705,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								553,
-								553
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "src/api/baseData.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7256,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4404,
-								4404
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1500.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "src/components/BoardButton.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 441,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								311,
-								311
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "src/components/PlayerForm.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 932,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								890,
-								890
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "public/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1595,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1065,
-								1065
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -920,20 +580,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
-					"file": "src/components/PlayerSelectionForm.js",
+					"buffer": 2,
+					"file": "src/api/index.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 842,
+						"buffer_size": 6446,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								786,
-								786
+								4244,
+								4244
 							]
 						],
 						"settings":
@@ -942,39 +602,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1713.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "src/components/Square.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1254,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								489,
-								489
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]

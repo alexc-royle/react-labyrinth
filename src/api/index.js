@@ -130,8 +130,9 @@ export const insertSpareSquare = (boardId, direction, itemNumber) => new Promise
 	
 );
 
-export const rotateSquare = (square) => new Promise(
+export const rotateSpareSquare = (boardId, square) => new Promise(
 	resolve => {
+		let board = getBoard(boardId);
 		var orientation = square.data.orientation;
 		var newOrientation = Object.assign({}, orientation, {
 			up: orientation.left,
@@ -139,7 +140,10 @@ export const rotateSquare = (square) => new Promise(
 			down: orientation.right,
 			left: orientation.down
 		});
-		resolve({...square, data: {...square.data, orientation: newOrientation}})
+		const rotatedSquare = {...square, data: {...square.data, orientation: newOrientation}};
+		board.spare = rotatedSquare;
+		boards = {...boards, [board.id]: board};
+		resolve(rotatedSquare);
 	}
 )
 
@@ -199,6 +203,7 @@ export const movePlayer = (boardId, player, direction) => new Promise(
 				default:
 					break;
 			}
+			console.log(canPlayerMove);
 			if(canPlayerMove) {
 				newBoard.players = newBoard.players.map(currentPlayer => {
 					if(currentPlayer.id != player.id) {
